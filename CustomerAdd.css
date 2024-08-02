@@ -1,0 +1,105 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.add-container,
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  margin-top: 20px;
+}
+
+.add-form,
+.registration-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: fit-content;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form header */
+.add-container h2 {
+  color: #333;
+  /* margin: 20px;
+  padding-top: 20px; */
+  text-align: center;
+}
+/* Input fields */
+.add-container .input-group {
+  margin-bottom: 15px;
+}
+
+.add-container input[type="text"],
+.add-container input[type="password"],
+.add-container input[type="email"],
+.add-container input[type="tel"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  width: calc(100% - 22px);
+}
+
+.add-container input[type="text"]:focus,
+.add-container input[type="password"]:focus,
+.add-container input[type="email"]:focus,
+.add-container input[type="tel"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-container input::placeholder {
+  color: #888;
+}
+
+/* Submit and cancel buttons */
+.registration-container input[type="submit"] {
+  background-color: #007bff;
+  width: 100;
+}
+.add-container input[type="submit"],
+.add-container input[type="button"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 48%;
+  margin: 10px 1%;
+  font-size: 16px;
+}
+
+.registration-container
+  input[type="submit"]
+  :hover
+  .add-container
+  input[type="submit"]:hover,
+.add-container input[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+/* Cancel button */
+.add-container input[type="button"] {
+  background-color: #6c757d;
+}
+
+.add-container input[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+@media (max-width: 480px) {
+  .add-form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,158 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.list-container {
+  height: 100vh;
+  background-color: #f0f2f5;
+  margin-top: 20px;
+}
+
+.list-container input {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.list-container h2 {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.table-responsive {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-collapse: collapse;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+thead {
+  background-color: #b6d6f8;
+  color: black;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th:first-child,
+td:first-child {
+  border-left: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  background-color: #b6d6f8;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 5px;
+  font-size: 14px;
+  height: fit-content;
+}
+
+.list-container input[type="button"] {
+  background-color: #acb6bf;
+  color: black;
+}
+
+.list-container input[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.delete {
+  background-color: #e47983;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .list-container {
+    margin-top: 5px;
+  }
+
+  .list-container input {
+    margin-left: 0;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .list-container h2 {
+    padding-left: 5px;
+    padding-top: 2px;
+    font-size: 18px;
+  }
+
+  .table-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+.table-responsive {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .table-responsive {
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling */
+  }
+}
+
+@media (max-width: 480px) {
+  .table-responsive {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling */
+  }
+
+  table {
+    min-width: 600px; /* Ensure table has a minimum width */
+  }
+}
